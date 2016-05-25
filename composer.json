@@ -1,0 +1,17 @@
+{
+    "name": "orige/yii2-schema-breadcrumbs",
+    "description": "Use schema.org breadcrumbs structure on your Yii2 projects",
+    "require": {
+        "yiisoft/yii2": "^2.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Eduardo Orige",
+            "email": "eduardo.orige@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "SchemaBreadcrumbs\\": ["src/"] }
+    }
+}
