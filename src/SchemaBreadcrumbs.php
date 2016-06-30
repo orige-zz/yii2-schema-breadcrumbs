@@ -79,7 +79,7 @@ class SchemaBreadcrumbs extends Breadcrumbs
             $link = Html::tag('span', $label, ['itemprop' => 'name']);
         }
 
-        $meta_content = count($this->totalLinks) + 1;
+        $meta_content = $this->totalLinks + 1;
         $meta = "<meta itemprop=\"position\" content=\"$meta_content\" />";
 
         $link .= $meta;
