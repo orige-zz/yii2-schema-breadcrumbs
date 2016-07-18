@@ -26,6 +26,18 @@ class SchemaBreadcrumbs extends Breadcrumbs
 
     public $totalLinks = 0;
 
+    public $defaultOptions = [];
+
+    function __construct()
+    {
+        parent::__construct();
+
+        $this->defaultOptions = [
+            'itemscope' => '',
+            'itemtype' => 'http://schema.org/BreadcrumbList',
+        ];
+    }
+
     public function run()
     {
         if (empty($this->links)) {
@@ -51,6 +63,8 @@ class SchemaBreadcrumbs extends Breadcrumbs
             $this->totalLinks += 1;
             $links[] = $this->renderItem($link, isset($link['url']) ? $this->itemTemplate : $this->activeItemTemplate);
         }
+
+        $this->options = array_merge($this->options, $this->defaultOptions);
 
         echo Html::tag($this->tag, implode('', $links), $this->options);
     }
