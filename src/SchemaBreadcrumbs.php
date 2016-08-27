@@ -33,7 +33,7 @@ class SchemaBreadcrumbs extends Breadcrumbs
         parent::__construct();
 
         $this->defaultOptions = [
-            'itemscope' => '',
+            'itemscope' => true,
             'itemtype' => 'http://schema.org/BreadcrumbList',
         ];
     }
